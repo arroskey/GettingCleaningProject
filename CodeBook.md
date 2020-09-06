@@ -55,7 +55,7 @@ The following steps conclude the transformation once the test and train datasets
   - Use rbind to combine the training and testing datasets into an all dataset
   - Perform a group_by for subject and activity name
   - Perform a summarise_all for mean() on all variables that produces the reduced dataset orderered by subject and activity name
-  - Use write.csv to create a file that is easily consumed by the reader with Excel or other products to review the data
+  - Use write.table to create a file that is easily consumed by the reader to review the data
 
 ## Variable descriptions
 The following variables are in the file produced by the above transformations:

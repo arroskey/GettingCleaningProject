@@ -79,6 +79,8 @@ allDF <- allDF %>% group_by(Subject,ActivityName) %>% summarize_all(mean)
 ##This file can be read with apps such as Excel for viewing
 if ( file.exists("measurement_means.csv") ) {
   file.remove("measurement_means.csv")
+  file.remove("measurement_means.txt")
 }
 
 write.csv(allDF, file="measurement_means.csv")
+write.table(allDF, file="measurement_means.txt",row.names=FALSE)
